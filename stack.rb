@@ -1,3 +1,4 @@
+# stack wihout arrray
 class Stack
     def initialize
         @top=nil
@@ -24,9 +25,9 @@ puts "Stack size?"
 stack_size = gets.to_i
 puts "Enter stack data"
 for i in 1..stack_size
-    value=gets
-    stack.push(value)
+    stack.push(gets)
 end
+puts "popped data as below.."
 for i in 1..stack_size
     puts stack.pop
 end

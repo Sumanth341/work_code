@@ -1,3 +1,4 @@
+# queue without array
 class Queue
     def initialize
         @top=nil

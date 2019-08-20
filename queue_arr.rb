@@ -1,3 +1,4 @@
+# queue with array
 puts "queue size?"
 $queue_size = gets.to_i
 arr=Array.new

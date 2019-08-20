@@ -1,3 +1,4 @@
+# stack with array and command line arguments
 class Stack
     attr_accessor :stack_size
     def initialize
