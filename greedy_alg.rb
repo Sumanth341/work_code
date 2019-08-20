@@ -8,3 +8,6 @@ key.each do |a|
 end
 puts "Below is the denomination"
 puts hash.reverse_each.to_h
+
+
+
