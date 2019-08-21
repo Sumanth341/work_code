@@ -1,12 +1,12 @@
-# stack with array and command line arguments
+# stack with array
 class Stack
-    attr_accessor :stack_size
+    attr_accessor :stack_size, :head_node
     def initialize
         @arr = Array.new
         @head_node = 0
     end
     def push(data)
-        raise "stack is full" if @head_node==@stack_size
+        return puts "stack is full" if @head_node==@stack_size
         @arr[@head_node]=data
         @head_node+=1
     end
@@ -18,11 +18,12 @@ class Stack
 end
 stack=Stack.new
 puts "stack size?"
-stack.stack_size=$stdin.gets.to_i
-ARGV.each do|a|
-    stack.push(a)
-end
-puts "popped elements as below.."
-for i in 1..stack.stack_size
-    stack.pop
+stack.stack_size=gets.to_i
+input="nil"
+until input == "exit"
+    stack.push(input[-1]) if input.chop == "push"
+    stack.pop if input == "pop"
+    puts stack.head_node if input =="index"
+    puts "enter push/pop/exit/index"
+    input = gets.chomp
 end
